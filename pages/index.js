@@ -1,18 +1,18 @@
-import Layout from '../components/Layout';
 import styled from 'styled-components';
 
 const IndexBlock = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 const Index = () => {
   return (
-    <Layout>
+    <div>
       <IndexBlock>
         <h1>THis is Index Page aa</h1>
       </IndexBlock>
-    </Layout>
+    </div>
   );
 };
 
