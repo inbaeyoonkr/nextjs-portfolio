@@ -1525,6 +1525,7 @@ const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_10__["createGloba
   } 
   html {
     height:100%;
+
   }
   body {
     margin: 0;
@@ -1549,7 +1550,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_9___default.a {
         enhanceApp: App => props => sheet.collectStyles(__jsx(App, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_7__["default"])({}, props, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 39
+            lineNumber: 40
           },
           __self: this
         })))
@@ -1568,20 +1569,20 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_9___default.a {
     return __jsx(next_document__WEBPACK_IMPORTED_MODULE_9__["Html"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 60
       },
       __self: this
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_9__["Head"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 61
       },
       __self: this
     }, __jsx("meta", {
       charSet: "utf-8",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 62
       },
       __self: this
     }), __jsx("meta", {
@@ -1589,31 +1590,31 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_9___default.a {
       content: "width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 63
       },
       __self: this
     })), __jsx("body", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67
+        lineNumber: 68
       },
       __self: this
     }, __jsx(GlobalStyle, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 69
       },
       __self: this
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_9__["Main"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69
+        lineNumber: 70
       },
       __self: this
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_9__["NextScript"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 71
       },
       __self: this
     })));
