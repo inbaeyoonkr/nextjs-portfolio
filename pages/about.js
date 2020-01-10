@@ -1,8 +1,23 @@
+import styled from 'styled-components';
+import DirectionButton from '../components/DirectionButton';
+
+const AboutBlock = styled.div`
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  bottom: 0;
+  left: 3rem;
+  display: flex;
+  flex-direction: row;
+`;
+
 const About = () => {
   return (
-    <div>
-      <h1>Hell this is about page</h1>
-    </div>
+    <AboutBlock>
+      <DirectionButton src={'/'} direction={'left'}></DirectionButton>
+
+      <DirectionButton src={'projects'} direction={'right'}></DirectionButton>
+    </AboutBlock>
   );
 };
 

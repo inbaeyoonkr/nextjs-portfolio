@@ -1,18 +1,42 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import Link from 'next/link';
 
 const DirectionButtonBlock = styled.div`
   position: absolute;
   top: 0;
-  right: 3rem;
-  left: 0;
   bottom: 0;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  ${props =>
+    props.direction === 'left'
+      ? css`
+          left: 0;
+        `
+      : css`
+          right: 0;
+        `};
 `;
 
-const DirectionButton = ({ direction }) => {
-  return <DirectionButtonBlock>></DirectionButtonBlock>;
+const ImageBlock = styled.img`
+  width: 2rem;
+`;
+
+const DirectionButton = ({ direction, src }) => {
+  return (
+    <DirectionButtonBlock direction={direction}>
+      <Link href={src}>
+        {direction === 'left' ? (
+          <a>
+            <ImageBlock src='/static/icons/left-arrow.svg' />
+          </a>
+        ) : (
+          <a>
+            <ImageBlock src='/static/icons/right-arrow.svg' />
+          </a>
+        )}
+      </Link>
+    </DirectionButtonBlock>
+  );
 };
 
 export default DirectionButton;
