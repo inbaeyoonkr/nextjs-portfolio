@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -120,9 +120,9 @@ const DirectionButtonBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___defa
   display: flex;
   align-items: center;
   ${props => props.direction === 'left' ? styled_components__WEBPACK_IMPORTED_MODULE_1__["css"]`
-          left: 0;
+          left: 3rem;
         ` : styled_components__WEBPACK_IMPORTED_MODULE_1__["css"]`
-          right: 0;
+          right: 3rem;
         `};
 `;
 const ImageBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img`
@@ -2279,18 +2279,34 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const AboutBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
   position: absolute;
   top: 0;
-  right: 3rem;
+  left: 0;
+  right: 0;
   bottom: 0;
-  left: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+const InfoBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
+  width: 80%;
+  height: 60%;
   display: flex;
   flex-direction: row;
+`;
+const SkillBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
+  width: 60%;
+  background-color: yellow;
+`;
+const CarrerBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
+  width: 40%;
+  background-color: lime;
 `;
 
 const About = () => {
   return __jsx(AboutBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 35
     },
     __self: undefined
   }, __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -2298,15 +2314,33 @@ const About = () => {
     direction: 'left',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 36
     },
     __self: undefined
-  }), __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), __jsx(InfoBlock, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: undefined
+  }, __jsx(SkillBlock, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: undefined
+  }, "\uAE30\uC220"), __jsx(CarrerBlock, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: undefined
+  }, "\uACBD\uB825")), __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
     src: 'projects',
     direction: 'right',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 41
     },
     __self: undefined
   }));
@@ -2316,7 +2350,7 @@ const About = () => {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/about.js ***!
   \******************************/

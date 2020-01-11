@@ -10,10 +10,10 @@ const DirectionButtonBlock = styled.div`
   ${props =>
     props.direction === 'left'
       ? css`
-          left: 0;
+          left: 3rem;
         `
       : css`
-          right: 0;
+          right: 3rem;
         `};
 `;
 

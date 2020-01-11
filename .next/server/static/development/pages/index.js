@@ -101,7 +101,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -133,9 +133,9 @@ const DirectionButtonBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___defa
   display: flex;
   align-items: center;
   ${props => props.direction === 'left' ? styled_components__WEBPACK_IMPORTED_MODULE_1__["css"]`
-          left: 0;
+          left: 3rem;
         ` : styled_components__WEBPACK_IMPORTED_MODULE_1__["css"]`
-          right: 0;
+          right: 3rem;
         `};
 `;
 const ImageBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img`
@@ -2322,8 +2322,8 @@ const printMessages = info => {
 const IndexBlock = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div`
   position: absolute;
   top: 0;
-  right: 3rem;
-  bottom: 3rem;
+  right: 0;
+  bottom: 0;
   left: 0;
   display: flex;
   flex-direction: column;
@@ -2368,7 +2368,7 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

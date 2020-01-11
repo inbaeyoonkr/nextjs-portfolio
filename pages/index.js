@@ -31,8 +31,8 @@ const printMessages = info => {
 const IndexBlock = styled.div`
   position: absolute;
   top: 0;
-  right: 3rem;
-  bottom: 3rem;
+  right: 0;
+  bottom: 0;
   left: 0;
   display: flex;
   flex-direction: column;

@@ -31,7 +31,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n          right: 0;\n        "]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n          right: 3rem;\n        "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -41,7 +41,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n          left: 0;\n        "]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n          left: 3rem;\n        "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -12205,8 +12205,38 @@ var _jsxFileName = "/Users/inbaeyoon/Desktop/nextjs-portfolio/pages/about.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
+function _templateObject4() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: 40%;\n  background-color: lime;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: 60%;\n  background-color: yellow;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: 80%;\n  height: 60%;\n  display: flex;\n  flex-direction: row;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: absolute;\n  top: 0;\n  right: 3rem;\n  bottom: 0;\n  left: 3rem;\n  display: flex;\n  flex-direction: row;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -12218,12 +12248,15 @@ function _templateObject() {
 
 
 var AboutBlock = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
+var InfoBlock = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject2());
+var SkillBlock = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject3());
+var CarrerBlock = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject4());
 
 var About = function About() {
   return __jsx(AboutBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 35
     },
     __self: this
   }, __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -12231,15 +12264,33 @@ var About = function About() {
     direction: 'left',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 36
     },
     __self: this
-  }), __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), __jsx(InfoBlock, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }, __jsx(SkillBlock, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }, "\uAE30\uC220"), __jsx(CarrerBlock, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, "\uACBD\uB825")), __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
     src: 'projects',
     direction: 'right',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 41
     },
     __self: this
   }));
@@ -12249,7 +12300,7 @@ var About = function About() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!******************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=%2FUsers%2Finbaeyoon%2FDesktop%2Fnextjs-portfolio%2Fpages%2Fabout.js ***!
   \******************************************************************************************************************************************/
@@ -12272,5 +12323,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=about.js.map
