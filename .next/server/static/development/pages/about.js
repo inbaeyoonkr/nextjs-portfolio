@@ -127,6 +127,10 @@ const DirectionButtonBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___defa
 `;
 const ImageBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img`
   width: 2rem;
+  :hover {
+    width: 3rem;
+    transition: 0.3s ease-in-out;
+  }
 `;
 
 const DirectionButton = ({
@@ -137,40 +141,40 @@ const DirectionButton = ({
     direction: direction,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 30
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: src,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 31
     },
     __self: undefined
   }, direction === 'left' ? __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: undefined
-  }, __jsx(ImageBlock, {
-    src: "/static/icons/left-arrow.svg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: undefined
-  })) : __jsx("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: undefined
   }, __jsx(ImageBlock, {
-    src: "/static/icons/right-arrow.svg",
+    src: "/static/icons/left-arrow.svg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
+    },
+    __self: undefined
+  })) : __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: undefined
+  }, __jsx(ImageBlock, {
+    src: "/static/icons/right-arrow.svg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
     },
     __self: undefined
   }))));
@@ -2295,18 +2299,25 @@ const InfoBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
 `;
 const SkillBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
   width: 60%;
-  background-color: yellow;
 `;
 const CarrerBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
   width: 40%;
-  background-color: lime;
 `;
+const Header = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h2`
+  margin: 0;
+  text-align: center;
+`;
+const SkillImage = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img`
+  width: 2rem;
+  transition: 1s ease-in-out;
+`;
+const imageSrcs = ['/static/icons/html.svg', '/static/icons/css.svg', '/static/icons/javascript.svg'];
 
 const About = () => {
   return __jsx(AboutBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 48
     },
     __self: undefined
   }, __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -2314,33 +2325,52 @@ const About = () => {
     direction: 'left',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 49
     },
     __self: undefined
   }), __jsx(InfoBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 50
     },
     __self: undefined
   }, __jsx(SkillBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 51
     },
     __self: undefined
-  }, "\uAE30\uC220"), __jsx(CarrerBlock, {
+  }, __jsx(Header, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 52
     },
     __self: undefined
-  }, "\uACBD\uB825")), __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, "Skills"), imageSrcs.map(src => __jsx(SkillImage, {
+    src: src,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: undefined
+  }))), __jsx(CarrerBlock, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: undefined
+  }, __jsx(Header, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    },
+    __self: undefined
+  }, "Careers"))), __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
     src: 'projects',
     direction: 'right',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 61
     },
     __self: undefined
   }));

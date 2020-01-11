@@ -140,6 +140,10 @@ const DirectionButtonBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___defa
 `;
 const ImageBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img`
   width: 2rem;
+  :hover {
+    width: 3rem;
+    transition: 0.3s ease-in-out;
+  }
 `;
 
 const DirectionButton = ({
@@ -150,40 +154,40 @@ const DirectionButton = ({
     direction: direction,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 30
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: src,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 31
     },
     __self: undefined
   }, direction === 'left' ? __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: undefined
-  }, __jsx(ImageBlock, {
-    src: "/static/icons/left-arrow.svg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: undefined
-  })) : __jsx("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: undefined
   }, __jsx(ImageBlock, {
-    src: "/static/icons/right-arrow.svg",
+    src: "/static/icons/left-arrow.svg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
+    },
+    __self: undefined
+  })) : __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: undefined
+  }, __jsx(ImageBlock, {
+    src: "/static/icons/right-arrow.svg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
     },
     __self: undefined
   }))));

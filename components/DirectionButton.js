@@ -19,6 +19,10 @@ const DirectionButtonBlock = styled.div`
 
 const ImageBlock = styled.img`
   width: 2rem;
+  :hover {
+    width: 3rem;
+    transition: 0.3s ease-in-out;
+  }
 `;
 
 const DirectionButton = ({ direction, src }) => {

@@ -22,21 +22,41 @@ const InfoBlock = styled.div`
 
 const SkillBlock = styled.div`
   width: 60%;
-  background-color: yellow;
 `;
 
 const CarrerBlock = styled.div`
   width: 40%;
-  background-color: lime;
 `;
+const Header = styled.h2`
+  margin: 0;
+  text-align: center;
+`;
+
+const SkillImage = styled.img`
+  width: 2rem;
+  transition: 1s ease-in-out;
+`;
+
+const imageSrcs = [
+  '/static/icons/html.svg',
+  '/static/icons/css.svg',
+  '/static/icons/javascript.svg'
+];
 
 const About = () => {
   return (
     <AboutBlock>
       <DirectionButton src={'/'} direction={'left'}></DirectionButton>
       <InfoBlock>
-        <SkillBlock>기술</SkillBlock>
-        <CarrerBlock>경력</CarrerBlock>
+        <SkillBlock>
+          <Header>Skills</Header>
+          {imageSrcs.map(src => (
+            <SkillImage src={src}></SkillImage>
+          ))}
+        </SkillBlock>
+        <CarrerBlock>
+          <Header>Careers</Header>
+        </CarrerBlock>
       </InfoBlock>
       <DirectionButton src={'projects'} direction={'right'}></DirectionButton>
     </AboutBlock>

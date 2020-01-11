@@ -21,7 +21,7 @@ var _jsxFileName = "/Users/inbaeyoon/Desktop/nextjs-portfolio/components/Directi
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: 2rem;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: 2rem;\n  :hover {\n    width: 3rem;\n    transition: 0.3s ease-in-out;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -74,40 +74,40 @@ var DirectionButton = function DirectionButton(_ref) {
     direction: direction,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 30
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: src,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 31
     },
     __self: this
   }, direction === 'left' ? __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, __jsx(ImageBlock, {
-    src: "/static/icons/left-arrow.svg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  })) : __jsx("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
   }, __jsx(ImageBlock, {
-    src: "/static/icons/right-arrow.svg",
+    src: "/static/icons/left-arrow.svg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
+    },
+    __self: this
+  })) : __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }, __jsx(ImageBlock, {
+    src: "/static/icons/right-arrow.svg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
     },
     __self: this
   }))));

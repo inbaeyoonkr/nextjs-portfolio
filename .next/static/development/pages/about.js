@@ -21,7 +21,7 @@ var _jsxFileName = "/Users/inbaeyoon/Desktop/nextjs-portfolio/components/Directi
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: 2rem;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: 2rem;\n  :hover {\n    width: 3rem;\n    transition: 0.3s ease-in-out;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -74,40 +74,40 @@ var DirectionButton = function DirectionButton(_ref) {
     direction: direction,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 30
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: src,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 31
     },
     __self: this
   }, direction === 'left' ? __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, __jsx(ImageBlock, {
-    src: "/static/icons/left-arrow.svg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  })) : __jsx("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
   }, __jsx(ImageBlock, {
-    src: "/static/icons/right-arrow.svg",
+    src: "/static/icons/left-arrow.svg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
+    },
+    __self: this
+  })) : __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }, __jsx(ImageBlock, {
+    src: "/static/icons/right-arrow.svg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
     },
     __self: this
   }))));
@@ -12205,8 +12205,28 @@ var _jsxFileName = "/Users/inbaeyoon/Desktop/nextjs-portfolio/pages/about.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
+function _templateObject6() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: 2rem;\n  transition: 1s ease-in-out;\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  margin: 0;\n  text-align: center;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: 40%;\n  background-color: lime;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: 40%;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -12216,7 +12236,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: 60%;\n  background-color: yellow;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: 60%;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -12251,12 +12271,15 @@ var AboutBlock = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_
 var InfoBlock = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject2());
 var SkillBlock = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject3());
 var CarrerBlock = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject4());
+var Header = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h2(_templateObject5());
+var SkillImage = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].img(_templateObject6());
+var imageSrcs = ['/static/icons/html.svg', '/static/icons/css.svg', '/static/icons/javascript.svg'];
 
 var About = function About() {
   return __jsx(AboutBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 48
     },
     __self: this
   }, __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -12264,33 +12287,54 @@ var About = function About() {
     direction: 'left',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 49
     },
     __self: this
   }), __jsx(InfoBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 50
     },
     __self: this
   }, __jsx(SkillBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 51
     },
     __self: this
-  }, "\uAE30\uC220"), __jsx(CarrerBlock, {
+  }, __jsx(Header, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 52
     },
     __self: this
-  }, "\uACBD\uB825")), __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, "Skills"), imageSrcs.map(function (src) {
+    return __jsx(SkillImage, {
+      src: src,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: this
+    });
+  })), __jsx(CarrerBlock, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: this
+  }, __jsx(Header, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    },
+    __self: this
+  }, "Careers"))), __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
     src: 'projects',
     direction: 'right',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 61
     },
     __self: this
   }));
