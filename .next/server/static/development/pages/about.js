@@ -3,6 +3,12 @@ module.exports =
 /******/ 	// The module cache
 /******/ 	var installedModules = require('../../../ssr-module-cache.js');
 /******/
+/******/ 	// object to store loaded chunks
+/******/ 	// "0" means "already loaded"
+/******/ 	var installedChunks = {
+/******/ 		"static/development/pages/about.js": 0
+/******/ 	};
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/
@@ -33,6 +39,26 @@ module.exports =
 /******/ 		return module.exports;
 /******/ 	}
 /******/
+/******/ 	// This file contains only the entry chunk.
+/******/ 	// The chunk loading function for additional chunks
+/******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
+/******/ 		var promises = [];
+/******/
+/******/
+/******/ 		// require() chunk loading for javascript
+/******/
+/******/ 		// "0" is the signal for "already loaded"
+/******/ 		if(installedChunks[chunkId] !== 0) {
+/******/ 			var chunk = require("../../../" + ({}[chunkId]||chunkId) + ".js");
+/******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
+/******/ 			for(var moduleId in moreModules) {
+/******/ 				modules[moduleId] = moreModules[moduleId];
+/******/ 			}
+/******/ 			for(var i = 0; i < chunkIds.length; i++)
+/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 		}
+/******/ 		return Promise.all(promises);
+/******/ 	};
 /******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
@@ -85,6 +111,13 @@ module.exports =
 /******/
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// uncaught error handler for webpack runtime
+/******/ 	__webpack_require__.oe = function(err) {
+/******/ 		process.nextTick(function() {
+/******/ 			throw err; // catch this error by using import().catch()
+/******/ 		});
+/******/ 	};
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -2303,6 +2336,28 @@ const SkillBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
 const CarrerBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
   width: 40%;
 `;
+const CarrerInfoBox = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
+  width: 100%;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  color: #868e96;
+  text-align: center;
+  padding: 1rem 2rem;
+
+  & + & {
+    margin-top: 1rem;
+  }
+
+  .period {
+  }
+  .title {
+    color: #343a40;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  .description {
+  }
+`;
 const Header = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h2`
   margin: 0;
   text-align: center;
@@ -2313,11 +2368,12 @@ const SkillImage = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img`
 `;
 const imageSrcs = ['/static/icons/html.svg', '/static/icons/css.svg', '/static/icons/javascript.svg'];
 
-const About = () => {
+const About = props => {
+  const carrers = props.carrers.default;
   return __jsx(AboutBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 74
     },
     __self: undefined
   }, __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -2325,55 +2381,89 @@ const About = () => {
     direction: 'left',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 75
     },
     __self: undefined
   }), __jsx(InfoBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 76
     },
     __self: undefined
   }, __jsx(SkillBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 77
     },
     __self: undefined
   }, __jsx(Header, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 78
     },
     __self: undefined
   }, "Skills"), imageSrcs.map(src => __jsx(SkillImage, {
     src: src,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 80
     },
     __self: undefined
   }))), __jsx(CarrerBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 83
     },
     __self: undefined
   }, __jsx(Header, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 84
     },
     __self: undefined
-  }, "Careers"))), __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, "Careers"), carrers.map(carrer => __jsx(CarrerInfoBox, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
+    },
+    __self: undefined
+  }, carrer.title), __jsx("div", {
+    className: "period",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88
+    },
+    __self: undefined
+  }, carrer.period), __jsx("div", {
+    className: "description",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89
+    },
+    __self: undefined
+  }, carrer.description))))), __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
     src: 'projects',
     direction: 'right',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 94
     },
     __self: undefined
   }));
+};
+
+About.getInitialProps = async function () {
+  const data = await __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.t.bind(null, /*! ../data/carrers.json */ "./data/carrers.json", 3));
+  return {
+    carrers: data
+  };
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);

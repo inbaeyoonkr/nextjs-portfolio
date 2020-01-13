@@ -27,6 +27,30 @@ const SkillBlock = styled.div`
 const CarrerBlock = styled.div`
   width: 40%;
 `;
+
+const CarrerInfoBox = styled.div`
+  width: 100%;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  color: #868e96;
+  text-align: center;
+  padding: 1rem 2rem;
+
+  & + & {
+    margin-top: 1rem;
+  }
+
+  .period {
+  }
+  .title {
+    color: #343a40;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  .description {
+  }
+`;
+
 const Header = styled.h2`
   margin: 0;
   text-align: center;
@@ -43,7 +67,9 @@ const imageSrcs = [
   '/static/icons/javascript.svg'
 ];
 
-const About = () => {
+const About = props => {
+  const carrers = props.carrers.default;
+
   return (
     <AboutBlock>
       <DirectionButton src={'/'} direction={'left'}></DirectionButton>
@@ -56,11 +82,26 @@ const About = () => {
         </SkillBlock>
         <CarrerBlock>
           <Header>Careers</Header>
+          {carrers.map(carrer => (
+            <CarrerInfoBox>
+              <div className='title'>{carrer.title}</div>
+              <div className='period'>{carrer.period}</div>
+              <div className='description'>{carrer.description}</div>
+            </CarrerInfoBox>
+          ))}
         </CarrerBlock>
       </InfoBlock>
       <DirectionButton src={'projects'} direction={'right'}></DirectionButton>
     </AboutBlock>
   );
+};
+
+About.getInitialProps = async function() {
+  const data = await import('../data/carrers.json');
+
+  return {
+    carrers: data
+  };
 };
 
 export default About;
