@@ -12219,7 +12219,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n  margin: 0;\n  text-align: center;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n  margin: 0;\n  margin-bottom: 1rem;\n  text-align: center;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -12229,7 +12229,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n  width: 100%;\n  border: 1px solid #dee2e6;\n  border-radius: 10px;\n  color: #868e96;\n  text-align: center;\n  padding: 1rem 2rem;\n\n  & + & {\n    margin-top: 1rem;\n  }\n\n  .period {\n  }\n  .title {\n    color: #343a40;\n    font-weight: 500;\n    font-size: 1.5rem;\n  }\n  .description {\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n  padding: 0.5rem 1rem;\n  border: 1px solid #dee2e6;\n  border-radius: 10px;\n  color: #868e96;\n  text-align: center;\n  width: 80%;\n  height: 5rem;\n  transition: height 0.5s;\n  transition-timing-function: linear;\n  overflow: hidden;\n\n  .period {\n  }\n\n  .title {\n    color: #343a40;\n    font-weight: 500;\n    font-size: 1.5rem;\n    letter-spacing: 0.3rem;\n  }\n  .description {\n  }\n\n  :hover {\n    height: 8rem;\n  }\n  & + & {\n    margin-top: 1rem;\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -12239,7 +12239,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n  width: 40%;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n  width: 40%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  overflow: auto;\n\n  img {\n    width: 1rem;\n    margin-top: 0.5rem;\n    margin-bottom: 0.5rem;\n    :last-child {\n      display: none;\n    }\n  }\n\n  .wrapper {\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -12294,7 +12294,7 @@ var About = function About(props) {
   return __jsx(AboutBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 100
     },
     __self: this
   }, __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -12302,25 +12302,25 @@ var About = function About(props) {
     direction: 'left',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 101
     },
     __self: this
   }), __jsx(InfoBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 102
     },
     __self: this
   }, __jsx(SkillBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 103
     },
     __self: this
   }, __jsx(Header, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 104
     },
     __self: this
   }, "Skills"), imageSrcs.map(function (src) {
@@ -12328,57 +12328,64 @@ var About = function About(props) {
       src: src,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 80
+        lineNumber: 106
       },
       __self: this
     });
   })), __jsx(CarrerBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 109
     },
     __self: this
   }, __jsx(Header, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 110
     },
     __self: this
   }, "Careers"), carrers.map(function (carrer) {
-    return __jsx(CarrerInfoBox, {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, __jsx(CarrerInfoBox, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86
+        lineNumber: 113
       },
       __self: this
     }, __jsx("div", {
       className: "title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87
+        lineNumber: 114
       },
       __self: this
     }, carrer.title), __jsx("div", {
       className: "period",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 88
+        lineNumber: 115
       },
       __self: this
     }, carrer.period), __jsx("div", {
       className: "description",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 89
+        lineNumber: 116
       },
       __self: this
-    }, carrer.description));
+    }, carrer.description)), __jsx("img", {
+      src: "/static/icons/down-arrow.svg",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 118
+      },
+      __self: this
+    }));
   }))), __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
     src: 'projects',
     direction: 'right',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 123
     },
     __self: this
   }));

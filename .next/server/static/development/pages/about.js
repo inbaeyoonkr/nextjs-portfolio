@@ -2335,31 +2335,57 @@ const SkillBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
 `;
 const CarrerBlock = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+
+  img {
+    width: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    :last-child {
+      display: none;
+    }
+  }
+
+  .wrapper {
+  }
 `;
 const CarrerInfoBox = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-  width: 100%;
+  padding: 0.5rem 1rem;
   border: 1px solid #dee2e6;
   border-radius: 10px;
   color: #868e96;
   text-align: center;
-  padding: 1rem 2rem;
-
-  & + & {
-    margin-top: 1rem;
-  }
+  width: 80%;
+  height: 5rem;
+  transition: height 0.5s;
+  transition-timing-function: linear;
+  overflow: hidden;
 
   .period {
   }
+
   .title {
     color: #343a40;
     font-weight: 500;
     font-size: 1.5rem;
+    letter-spacing: 0.3rem;
   }
   .description {
+  }
+
+  :hover {
+    height: 8rem;
+  }
+  & + & {
+    margin-top: 1rem;
   }
 `;
 const Header = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h2`
   margin: 0;
+  margin-bottom: 1rem;
   text-align: center;
 `;
 const SkillImage = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img`
@@ -2373,7 +2399,7 @@ const About = props => {
   return __jsx(AboutBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 100
     },
     __self: undefined
   }, __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -2381,79 +2407,86 @@ const About = props => {
     direction: 'left',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 101
     },
     __self: undefined
   }), __jsx(InfoBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 102
     },
     __self: undefined
   }, __jsx(SkillBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 103
     },
     __self: undefined
   }, __jsx(Header, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 104
     },
     __self: undefined
   }, "Skills"), imageSrcs.map(src => __jsx(SkillImage, {
     src: src,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 106
     },
     __self: undefined
   }))), __jsx(CarrerBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 109
     },
     __self: undefined
   }, __jsx(Header, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 110
     },
     __self: undefined
-  }, "Careers"), carrers.map(carrer => __jsx(CarrerInfoBox, {
+  }, "Careers"), carrers.map(carrer => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(CarrerInfoBox, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 113
     },
     __self: undefined
   }, __jsx("div", {
     className: "title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 114
     },
     __self: undefined
   }, carrer.title), __jsx("div", {
     className: "period",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 115
     },
     __self: undefined
   }, carrer.period), __jsx("div", {
     className: "description",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 116
     },
     __self: undefined
-  }, carrer.description))))), __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, carrer.description)), __jsx("img", {
+    src: "/static/icons/down-arrow.svg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 118
+    },
+    __self: undefined
+  }))))), __jsx(_components_DirectionButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
     src: 'projects',
     direction: 'right',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 123
     },
     __self: undefined
   }));

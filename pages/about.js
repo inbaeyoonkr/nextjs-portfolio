@@ -26,33 +26,59 @@ const SkillBlock = styled.div`
 
 const CarrerBlock = styled.div`
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+
+  img {
+    width: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    :last-child {
+      display: none;
+    }
+  }
+
+  .wrapper {
+  }
 `;
 
 const CarrerInfoBox = styled.div`
-  width: 100%;
+  padding: 0.5rem 1rem;
   border: 1px solid #dee2e6;
   border-radius: 10px;
   color: #868e96;
   text-align: center;
-  padding: 1rem 2rem;
-
-  & + & {
-    margin-top: 1rem;
-  }
+  width: 80%;
+  height: 5rem;
+  transition: height 0.5s;
+  transition-timing-function: linear;
+  overflow: hidden;
 
   .period {
   }
+
   .title {
     color: #343a40;
     font-weight: 500;
     font-size: 1.5rem;
+    letter-spacing: 0.3rem;
   }
   .description {
+  }
+
+  :hover {
+    height: 8rem;
+  }
+  & + & {
+    margin-top: 1rem;
   }
 `;
 
 const Header = styled.h2`
   margin: 0;
+  margin-bottom: 1rem;
   text-align: center;
 `;
 
@@ -83,11 +109,14 @@ const About = props => {
         <CarrerBlock>
           <Header>Careers</Header>
           {carrers.map(carrer => (
-            <CarrerInfoBox>
-              <div className='title'>{carrer.title}</div>
-              <div className='period'>{carrer.period}</div>
-              <div className='description'>{carrer.description}</div>
-            </CarrerInfoBox>
+            <>
+              <CarrerInfoBox>
+                <div className='title'>{carrer.title}</div>
+                <div className='period'>{carrer.period}</div>
+                <div className='description'>{carrer.description}</div>
+              </CarrerInfoBox>
+              <img src='/static/icons/down-arrow.svg'></img>
+            </>
           ))}
         </CarrerBlock>
       </InfoBlock>

@@ -14,5 +14,13 @@
       "file": "static/chunks/0.js",
       "publicPath": "static/chunks/0.js"
     }
+  ],
+  "typewriter-effect": [
+    {
+      "id": "./node_modules/typewriter-effect/dist/react.js",
+      "name": "./node_modules/typewriter-effect/dist/react.js",
+      "file": "static/chunks/2.js",
+      "publicPath": "static/chunks/2.js"
+    }
   ]
 }
